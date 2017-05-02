@@ -43,11 +43,23 @@ def get_corny_joke
 end
 
 def login_button
-  find_element(:name, "login_button")
+  sleep 1
+  driver.execute_script 'mobile: tap', :x => 539, :y => 1464, :fingers => 1, :tapCount => 1, :duration => 0.5
+  sleep 1
+  driver.execute_script 'mobile: tap', :x => 871, :y => 1130, :fingers => 1, :tapCount => 1, :duration => 0.5
+  sleep 1
+end
+
+def like_button_start
+  sleep 1
+  driver.execute_script 'mobile: tap', :x => 851, :y => 1200, :fingers => 1, :tapCount => 1, :duration => 0.5
+  sleep 1
 end
 
 def like_button
-  find_element(:name, "like_button")
+  sleep 1
+  driver.execute_script 'mobile: tap', :x => 727, :y => 1774, :fingers => 1, :tapCount => 1, :duration => 0.5
+  sleep 1
 end
 
 def send_message(text)
@@ -59,25 +71,28 @@ def send_message(text)
 end
 
 def matches?
-  exists { find_element(:name, "Matched on").click } ? false : true
+  exists { find_element(:text, "Matched on").click } ? false : true
 end
 
 def click_msgs_btn
-  driver.execute_script 'mobile: tap', :x => 287, :y => 96, :fingers => 1, :tapCount => 1, :duration => 0.5
+  driver.execute_script 'mobile: tap', :x => 900, :y => 165, :fingers => 1, :tapCount => 1, :duration => 0.5
 
 end
 
 def go_to_tinder_home
-  driver.execute_script 'mobile: tap', :x => 105, :y => 116, :fingers => 1, :tapCount => 1, :duration => 0.5
+  driver.execute_script 'mobile: tap', :x => 450, :y => 155, :fingers => 1, :tapCount => 1, :duration => 0.5
 end
 
 set_wait(5)
 i=0
 while true do
   begin
-    login_button.click
+    puts "Logging in..."
+    login_button
     puts "Looking for girls to match..."
-    like_button.click
+    like_button_start
+    puts "Skipping tutorial..."
+    like_button
     puts "Liked Girl #: #{i+=1}"
   rescue Selenium::WebDriver::Error::NoSuchElementError
     begin
@@ -106,5 +121,3 @@ while true do
     end
   end
 end
-
-
