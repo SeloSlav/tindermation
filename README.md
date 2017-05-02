@@ -27,7 +27,7 @@ NO MORE MATCHES :(
 
 ## Setup Instructions
 
-I would begin by installing <a href="https://www.google.cz/search?q=cygwin+latest+installation&rlz=1C1CHBD_enCZ733CZ733&oq=cygwin+latest+installation&aqs=chrome..69i57j0l5.2824j0j7&sourceid=chrome&ie=UTF-8">Cygwin</a> if you are a Windows user in order to quickly download the required dependencies. Make sure to include ``curl`` in your installation.
+If you are a Windows users, I would begin by installing <a href="https://www.google.cz/search?q=cygwin+latest+installation&rlz=1C1CHBD_enCZ733CZ733&oq=cygwin+latest+installation&aqs=chrome..69i57j0l5.2824j0j7&sourceid=chrome&ie=UTF-8">Cygwin</a>. This will allow you to quickly install the required dependencies. Make sure to include ``curl`` in your installation.
 
 Install the latest stable release of Ruby.
 ```
