@@ -3,7 +3,7 @@
 ![Tindermation Logo](https://github.com/santafebound/tindermation/blob/master/web_hi_res_512.png)
 
 ## Description
-Warning: This script is not yet functional. If have experience with Appium or <a href="http://www.software-testing-tutorials-automation.com/2015/10/ui-automator-viewer-get-android-app.html">UI Automater Viewer</a>, then please consider contributing!
+Warning: This script is not yet functional. If you have experience with Appium Inspector or <a href="http://www.software-testing-tutorials-automation.com/2015/10/ui-automator-viewer-get-android-app.html">UI Automator Viewer</a>, then please consider contributing!
 
 Tindermation is an automation script that swipes right on every single encounter. It also sends corny pick-up lines for each match. This project was forked from <a href="https://github.com/freelobot">freelobot</a> and updated for use in the latest Tinder installations.
 
