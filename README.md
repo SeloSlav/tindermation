@@ -182,7 +182,7 @@ ruby tindermation.rb
 
 Unfortunately, I cannot get this script running in its current state. In order to get past the login splash screen, we need to automate the "Log In With Facebook" button and subsequent Permission Request, i.e. "Allow Tinder to access this device's location?". Next, the like button (heart) must be clicked, the first "like button" instruction dialog must be closed, and liking must then continue as normal. This will require figuring out the names of the various UI elements using Appium Inspector or UI Automator Viewer. If you have experience with either of these tools, then please consider a Pull Request!
 
-Installation and script execution works just fine but unfortunately the proper UI elements have no been configured to interact with the latest versions of Tinder and Appium:
+Installation and script execution works just fine but unfortunately the proper UI elements have not been configured to interact with the latest versions of Tinder and Appium:
 
 ```
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/response.rb:69:in `assert_ok': Method has not yet been implemented (Selenium::WebDriver::Error::UnknownError)
