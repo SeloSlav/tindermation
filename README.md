@@ -3,6 +3,8 @@
 ![Tindermation Logo](https://github.com/santafebound/tindermation/blob/master/web_hi_res_512.png)
 
 ## Description
+Warning: This script is not yet functional. If have experience with Appium or <a href="http://www.software-testing-tutorials-automation.com/2015/10/ui-automator-viewer-get-android-app.html">UI Automater Viewer</a>, then please consider contributing!
+
 Tindermation is an automation script that swipes right on every single encounter. It also sends corny pick-up lines for each match. This project was forked from <a href="https://github.com/freelobot">freelobot</a> and updated for use in the latest Tinder installations.
 
 ## Example Output
@@ -142,6 +144,27 @@ Find and download the latest Tinder APK: http://www.androidapksfree.com/apk/tind
 
 Download the actual Tindermation script from this repository with the following command ``git clone https://github.com/santafebound/tindermation.git``
 
+## Configure the Script
+
+If you are running this script from a connected Android device then pay attention to lines 21-30:
+
+```ruby
+capabilities = {
+    'appium-version'=> '1.0',
+    'platformName'=> 'Android',
+    'platformVersion'=> '6.0',
+    'deviceName'=> '10.0.0.2:5555',
+    'device' => 'android',
+    'app' => 'C:/tindermation-apk/tinder.apk',
+    'app-package' => 'com.tinder',
+    'app-activity' => 'com.tinder.activities.ActivitySplashLoading_'
+  }
+```
+
+It is here that you will configure your ``platformVersion``, i.e. 6.0, and the file path to your APK, under ``app``, i.e. C:/tindermation-apk/tinder.apk, or wherever you have installed it on your computer.
+
+## Run the Script
+
 Navigate to ``C:\Users\santafebound\Documents\tindermation\node_modules\.bin`` and run the following Ruby commands:
 
 ```ruby
@@ -149,8 +172,30 @@ gem install bundler
 bundle install
 ```
 
-If it isn't already, make sure your appium server is running with ``appium &``. Finally, from the root directory at ``C:\Users\santafebound\Documents\tindermation`` run:
+Double-check that your appium server is running with ``appium &``. Finally, from the root directory at ``C:\Users\santafebound\Documents\tindermation`` run:
 
 ```ruby
 ruby tindermation.rb
+```
+
+## Obstacles
+
+Unfortunately, I cannot get this script running in its current state. In order to get past the login splash screen, we need to automate the "Log In With Facebook" button and subsequent Permission Request, i.e. "Allow Tinder to access this device's location?". Next, the like button (heart) must be clicked, the first "like button" instruction dialog must be closed, and liking must then continue as normal. This will require figuring out the names of the various UI elements using Appium Inspector or UI Automator Viewer. If you have experience with either of these tools, then please consider a Pull Request!
+
+Installation and script execution works just fine but unfortunately the proper UI elements have no been configured to interact with the latest versions of Tinder and Appium:
+
+```
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/response.rb:69:in `assert_ok': Method has not yet been implemented (Selenium::WebDriver::Error::UnknownError)
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/response.rb:32:in `initialize'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/common.rb:83:in `new'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/common.rb:83:in `create_response'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/default.rb:107:in `request'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/common.rb:61:in `call'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/bridge.rb:678:in `raw_execute'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/bridge.rb:656:in `execute'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/bridge.rb:339:in `execute_script'
+        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/common/driver.rb:232:in `execute_script'
+        from tindermation.rb:47:in `login_button'
+        from tindermation.rb:91:in `<main>'
+Logging in...
 ```
