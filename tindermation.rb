@@ -7,7 +7,7 @@ if ENV['SAUCE']
   capabilities = {
     'appium-version'=> '1.0',
     'platformName'=> 'Android',
-    'platformVersion'=> '4.4',
+    'platformVersion'=> '6.0',
     'deviceName'=> 'Android Emulator',
     'app'=> 'sauce-storage:tinder.apk.zip',
     'appPackage' => 'com.tinder',
@@ -15,16 +15,16 @@ if ENV['SAUCE']
     'name' => "Tindermation",
     'locationServicesEnabled' => true
   }
-  server_url = "http://0.0.0.0:4723/wd/hub"
+  server_url = "http://localhost:4723/wd/hub/status"
   Appium::Driver.new(caps: capabilities).start_driver
 else
   capabilities = {
     'appium-version'=> '1.0',
     'platformName'=> 'Android',
-    'platformVersion'=> '4.4',
+    'platformVersion'=> '6.0',
     'deviceName'=> '10.0.0.2:5555',
     'device' => 'android',
-    'app' => '/Path/to/tinder.apk',
+    'app' => 'C:/tindermation-apk/tinder.apk',
     'app-package' => 'com.tinder',
     'app-activity' => 'com.tinder.activities.ActivitySplashLoading_'
   }
