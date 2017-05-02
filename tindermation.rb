@@ -42,6 +42,10 @@ def get_corny_joke
   page.css("h2").text
 end
 
+def login_button
+  find_element(:name, "login_button")
+end
+
 def like_button
   find_element(:name, "like_button")
 end
@@ -71,6 +75,7 @@ set_wait(5)
 i=0
 while true do
   begin
+    login_button.click
     puts "Looking for girls to match..."
     like_button.click
     puts "Liked Girl #: #{i+=1}"
