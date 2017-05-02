@@ -3,7 +3,7 @@
 ![Tindermation Logo](https://github.com/santafebound/tindermation/blob/master/web_hi_res_512.png)
 
 ## Description
-Tindermation is an automation script that swipes right on every single encounter. It also sends corny pick-up lines for each match. This project was forked from @freelobot and updated for use in the latest Tinder installations.
+Tindermation is an automation script that swipes right on every single encounter. It also sends corny pick-up lines for each match. This project was forked from <a href="https://github.com/freelobot">freelobot</a> and updated for use in the latest Tinder installations.
 
 ## Example Output
 ```
@@ -27,7 +27,7 @@ NO MORE MATCHES :(
 
 ## Setup Instructions
 
-If you are a Windows users, I would begin by installing <a href="https://www.google.cz/search?q=cygwin+latest+installation&rlz=1C1CHBD_enCZ733CZ733&oq=cygwin+latest+installation&aqs=chrome..69i57j0l5.2824j0j7&sourceid=chrome&ie=UTF-8">Cygwin</a>. This will allow you to quickly install the required dependencies. Make sure to include ``curl`` in your installation.
+If you are a Windows user, I would begin by installing <a href="https://www.google.cz/search?q=cygwin+latest+installation&rlz=1C1CHBD_enCZ733CZ733&oq=cygwin+latest+installation&aqs=chrome..69i57j0l5.2824j0j7&sourceid=chrome&ie=UTF-8">Cygwin</a>. This will allow you to quickly download the required dependencies to run this script. Make sure to include ``curl``, ``rvm``, ``brew``, ``node``, ``ant``, ``mvn`` and ``npm`` with your initial installation.
 
 Install the latest stable release of Ruby.
 ```
