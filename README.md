@@ -123,9 +123,15 @@ npm install -g authorize-ios
 authorize-ios
 ```
 
-Start appium
+Start appium (from the appium directory)
 ```
 node .
+```
+
+or (from any directory)
+
+```
+appium &
 ```
 
 ## Download the Tinder APK
@@ -136,14 +142,14 @@ Find and download the latest Tinder APK: http://www.androidapksfree.com/apk/tind
 
 Download the actual Tindermation script from this repository with the following command ``git clone https://github.com/santafebound/tindermation.git``
 
-Navigate to ``C:\Users\mnxe\Documents\tindermation\node_modules\.bin`` and run the following Ruby commands:
+Navigate to ``C:\Users\santafebound\Documents\tindermation\node_modules\.bin`` and run the following Ruby commands:
 
 ```ruby
 gem install bundler
 bundle install
 ```
 
-Now, from the root directory at ``C:\Users\mnxe\Documents\tindermation`` run:
+If it isn't already, make sure your appium server is running with ``appium &``. Finally, from the root directory at ``C:\Users\santafebound\Documents\tindermation`` run:
 
 ```ruby
 ruby tindermation.rb
