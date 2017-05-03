@@ -128,7 +128,7 @@ If you are running this script from a connected Android device then pay attentio
 
 ```ruby
 capabilities = {
-    'appium-version'=> '1.0',
+    'appium-version'=> '1.6.4',
     'platformName'=> 'Android',
     'platformVersion'=> '6.0',
     'deviceName'=> '10.0.0.2:5555',
@@ -139,7 +139,7 @@ capabilities = {
   }
 ```
 
-It is here that you will configure your ``platformVersion``, i.e. 6.0, and the file path to your APK, under ``app``, i.e. C:/tindermation-apk/tinder.apk, or wherever you have installed it on your computer.
+It is here that you will configure your ``platformVersion``, i.e. 6.0, the file path to your APK, under ``app``, i.e. C:/tindermation-apk/tinder.apk, or wherever you have installed it on your computer, and your ``appium-version``, i.e. 1.6.4.
 
 ## Run the Script
 
