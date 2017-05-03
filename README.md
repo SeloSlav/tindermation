@@ -3,29 +3,7 @@
 ![Tindermation Logo](https://github.com/santafebound/tindermation/blob/master/web_hi_res_512.png)
 
 ## Description
-**Warning:** This script is not yet functional. If you have experience with Appium Inspector or <a href="http://www.software-testing-tutorials-automation.com/2015/10/ui-automator-viewer-get-android-app.html">UI Automator Viewer</a>, then please consider contributing!
-
 Tindermation is an automation script that swipes right on every single encounter. It also sends corny pick-up lines for each match. This project was forked from <a href="https://github.com/feelobot">feelobot</a> and updated for use in the latest Tinder installations.
-
-## Example Output
-```
-Looking for girls to match...
-#############################################
-NO MORE GIRLS :(
-CHECKING MESSAGES
-#############################################
-Hey..somebody farted. Let's get out of here.
-Is your last name Gillete cause your the best a man can get.
-So what haven't you been told tonight?
-I was so enchanted by your beauty that I ran into that wall over there. So I am going to need your name and number for insurance purposes..
-You must be a sargeant, because you have my private standing in attention.
-I've just moved you to the top of my 'to do' list.
-Go up to a girl, ask her: "Do you know what winks and screws like a tiger?" [No] Then wink..
-The only reason I would kick you out of bed would be to fuck you on the floor.
-#############################################
-NO MORE MATCHES :(
-#############################################
-```
 
 ## Setup Instructions
 
@@ -176,26 +154,4 @@ Double-check that your appium server is running with ``appium &``. Finally, from
 
 ```ruby
 ruby tindermation.rb
-```
-
-## Obstacles
-
-Unfortunately, I cannot get this script running in its current state. In order to get past the login splash screen, we need to automate the "Log In With Facebook" button and subsequent Permission Request, i.e. "Allow Tinder to access this device's location?". Next, the like button (heart) must be clicked, the first "like button" instruction dialog must be closed, and liking must then continue as normal. This will require figuring out the names of the various UI elements using Appium Inspector or UI Automator Viewer. If you have experience with either of these tools, then please consider a Pull Request!
-
-Installation and script execution works just fine but unfortunately the proper UI elements have not been configured to interact with the latest versions of Tinder and Appium:
-
-```
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/response.rb:69:in `assert_ok': Method has not yet been implemented (Selenium::WebDriver::Error::UnknownError)
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/response.rb:32:in `initialize'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/common.rb:83:in `new'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/common.rb:83:in `create_response'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/default.rb:107:in `request'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/http/common.rb:61:in `call'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/bridge.rb:678:in `raw_execute'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/bridge.rb:656:in `execute'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/remote/bridge.rb:339:in `execute_script'
-        from C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/selenium-webdriver-3.4.0/lib/selenium/webdriver/common/driver.rb:232:in `execute_script'
-        from tindermation.rb:47:in `login_button'
-        from tindermation.rb:91:in `<main>'
-Logging in...
 ```
