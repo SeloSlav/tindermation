@@ -2,9 +2,32 @@
 
 ![Tindermation Logo](https://github.com/santafebound/tindermation/blob/master/web_hi_res_512.png)
 
+## Table of Contents  
+* [Description](#description)
+* [Team & Past Contributors](#team)
+* [Setup Instructions](#setup)
+* [Download the Tinder APK](#tinder)
+* [Clone Tindermation](#clone)
+* [Configure the Script](#configure)
+* [Run the Script](#script)
+* [Future Development](#future)
+
+<hr>
+
+<a name="description"/>
 ## Description
 Tindermation is an automation script that swipes right on every single encounter. This project was forked from <a href="https://github.com/feelobot">feelobot</a> and updated for use in the latest Tinder installations. I've simplified the script just to get it running so it doesn't send pick up lines just yet. I also need to upgrade to Tinder Plus to experiment a little bit more! Enjoy.
 
+<hr>
+
+<a name="team"/>
+## Team & Past Contributors
+Original Author: <a href="https://github.com/feelobot">feelobot</a> 
+<a href="https://github.com/santafebound">santafebound</a> 
+
+<hr>
+
+<a name="setup"/>
 ## Setup Instructions
 
 If you are a Windows user, I would begin by installing <a href="https://www.google.cz/search?q=cygwin+latest+installation&rlz=1C1CHBD_enCZ733CZ733&oq=cygwin+latest+installation&aqs=chrome..69i57j0l5.2824j0j7&sourceid=chrome&ie=UTF-8">Cygwin</a>. This will allow you to quickly download the required dependencies to run this script. Make sure to include ``curl``, ``rvm``, ``brew``, ``node``, ``ant``, ``mvn`` and ``npm`` with your initial installation.
@@ -114,14 +137,23 @@ or (from any directory)
 appium &
 ```
 
+<hr>
+
+<a name="tinder"/>
 ## Download the Tinder APK
 
-Find and download the latest Tinder APK: http://www.androidapksfree.com/apk/tinder-apk-latest-version-download-for-android/
+Download the latest Tinder APK: http://www.androidapksfree.com/apk/tinder-apk-latest-version-download-for-android/
 
-## Download Tindermation
+<hr>
+
+<a name="clone"/>
+## Clone Tindermation
 
 Download the actual Tindermation script from this repository with the following command ``git clone https://github.com/santafebound/tindermation.git``
 
+<hr>
+
+<a name="configure"/>
 ## Configure the Script
 
 If you are running this script from a connected Android device then pay attention to lines 21-30:
@@ -141,6 +173,9 @@ capabilities = {
 
 It is here that you will configure your ``platformVersion``, i.e. 6.0, the file path to your APK, under ``app``, i.e. C:/tindermation-apk/tinder.apk, or wherever you have installed it on your computer, and your ``appium-version``, i.e. 1.6.4.
 
+<hr>
+
+<a name="script"/>
 ## Run the Script
 
 Navigate to ``C:\Users\santafebound\Documents\tindermation\node_modules\.bin`` and run the following Ruby commands:
@@ -155,3 +190,9 @@ Double-check that your appium server is running with ``appium &``. Finally, from
 ```ruby
 ruby tindermation.rb
 ```
+
+<hr>
+
+<a name="future"/>
+## Future Development
+Getting the script to run properly on every device will be require some refactoring because as now I'm simply selecting the X,Y coordinates that correspond to certain UI elements on my own device. I will have to download Appium Inspector or UI Automator Viewer to determine the actual element identifiers. Anwayy, feel free to make a Pull Request if you would like to contribute and improve upon the script! It would also be nice to Dockerize everything because there are many dependencies and this could be annoying for non-developers. I mean, just take look at the Setup Instructions above. Otherwise, enjoy!
