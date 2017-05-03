@@ -20,14 +20,14 @@ Tindermation is an automation script that swipes right on every single encounter
 
 <hr>
 
-<a name="team"/>
+<a name="team"></a>
 ## Team & Past Contributors
 Original Author: <a href="https://github.com/feelobot">feelobot</a> 
 <a href="https://github.com/santafebound">santafebound</a> 
 
 <hr>
 
-<a name="setup"/>
+<a name="setup"></a>
 ## Setup Instructions
 
 If you are a Windows user, I would begin by installing <a href="https://www.google.cz/search?q=cygwin+latest+installation&rlz=1C1CHBD_enCZ733CZ733&oq=cygwin+latest+installation&aqs=chrome..69i57j0l5.2824j0j7&sourceid=chrome&ie=UTF-8">Cygwin</a>. This will allow you to quickly download the required dependencies to run this script. Make sure to include ``curl``, ``rvm``, ``brew``, ``node``, ``ant``, ``mvn`` and ``npm`` with your initial installation.
@@ -139,21 +139,21 @@ appium &
 
 <hr>
 
-<a name="tinder"/>
+<a name="tinder"></a>
 ## Download the Tinder APK
 
 Download the latest Tinder APK: http://www.androidapksfree.com/apk/tinder-apk-latest-version-download-for-android/
 
 <hr>
 
-<a name="clone"/>
+<a name="clone"></a>
 ## Clone Tindermation
 
 Download the actual Tindermation script from this repository with the following command ``git clone https://github.com/santafebound/tindermation.git``
 
 <hr>
 
-<a name="configure"/>
+<a name="configure"></a>
 ## Configure the Script
 
 If you are running this script from a connected Android device then pay attention to lines 21-30:
@@ -175,7 +175,7 @@ It is here that you will configure your ``platformVersion``, i.e. 6.0, the file 
 
 <hr>
 
-<a name="script"/>
+<a name="script"></a>
 ## Run the Script
 
 Navigate to ``C:\Users\santafebound\Documents\tindermation\node_modules\.bin`` and run the following Ruby commands:
@@ -193,6 +193,6 @@ ruby tindermation.rb
 
 <hr>
 
-<a name="future"/>
+<a name="future"></a>
 ## Future Development
 Getting the script to run properly on every device will be require some refactoring because as now I'm simply selecting the X,Y coordinates that correspond to certain UI elements on my own device. I will have to download Appium Inspector or UI Automator Viewer to determine the actual element identifiers. Anwayy, feel free to make a Pull Request if you would like to contribute and improve upon the script! It would also be nice to Dockerize everything because there are many dependencies and this could be annoying for non-developers. I mean, just take look at the Setup Instructions above. Otherwise, enjoy!
