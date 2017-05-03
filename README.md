@@ -22,7 +22,7 @@ Tindermation is an automation script that swipes right on every single encounter
 
 <a name="team"></a>
 ## Team & Past Contributors
-* <a href="https://github.com/feelobot">feelobot</a><br> (original author)
+* <a href="https://github.com/feelobot">feelobot</a> (original author)<br> 
 * <a href="https://github.com/santafebound">santafebound</a> 
 
 <hr>
