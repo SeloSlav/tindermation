@@ -18,7 +18,7 @@
 ## Description
 Tindermation is an automation script for Android devices that swipes right on every single encounter. This project was forked from <a href="https://github.com/feelobot">feelobot</a> and updated for use in the more recent Tinder installations. I've simplified the script just to get it running so it doesn't send pick up lines or anything fancy yet, but it is operable with some configuration.
 
-[![Tindermation Example Video](https://img.youtube.com/vi/x8D2UlPnmtM/0.jpg)](https://www.youtube.com/watch?v=x8D2UlPnmtM)
+[![Tindermation Example Video](https://github.com/santafebound/tindermation/blob/master/youtube-512.png)](https://www.youtube.com/watch?v=x8D2UlPnmtM)
 
 <hr>
 
