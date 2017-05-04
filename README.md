@@ -16,8 +16,7 @@
 
 <a name="description"></a>
 ## Description
-Tindermation is an automation script for Android devices that swipes right on every single encounter. This project was forked from <a href="https://github.com/feelobot">feelobot</a> and updated for use in the more recent Tinder installations. I've simplified the script just to get it running so it doesn't send pick up lines or anything fancy yet, but it is operable with some configuration.
-
+Tindermation is the fastest way to generate a large quantity of Tinder leads. Tindermation is an automation script for Android devices that swipes right on every single encounter. This project was forked from <a href="https://github.com/feelobot">feelobot</a> and updated for use in the more recent Tinder installations.
 
 | <a href="https://www.youtube.com/watch?v=x8D2UlPnmtM"><img src="https://github.com/santafebound/tindermation/blob/master/youtube-512.png" width="96"></a>  |
 | ------------- |
@@ -199,5 +198,18 @@ ruby tindermation.rb
 <hr>
 
 <a name="future"></a>
-## Future Development
-Getting the script to run properly on every device will be require some refactoring because as for now I'm simply selecting the X,Y coordinates that correspond to certain UI elements on my own device. I will have to download Appium Inspector or UI Automator Viewer to determine the actual element identifiers. Anway, feel free to make a Pull Request if you would like to contribute and improve upon the script! It would also be nice to Dockerize everything because there are many dependencies and this could be annoying for non-developers. I mean, just take look at the Setup Instructions above. Otherwise, enjoy!
+## Ideas for Future Development
+
+### Cross-Device Compatability
+Getting the script to run properly on every device will be require some refactoring because as for now I'm simply selecting the X,Y coordinates that correspond to certain UI elements on my own device (Xaomi Redmi Note 4). I will have to download Appium Inspector or UI Automator Viewer to determine the actual element identifiers.
+
+### Running in the Background?
+Currently, Appium's Ruby library allows us to send applications to the background but automations will always continue to run on the main OS thread. This means we can't run automations unless the desired application is actively in-use. To truly automate swiping, we are probably better off accessing the Tinder API directly. See <a href="https://github.com/deftx/loltinder">loltinder.git</a>.
+
+### Send a Message
+Check for matches and send a message from a list of pre-populated openers?
+
+### Containerization
+Somebody with Docker experience might be able to contain the script in an environment that comes pre-loaded with all of its dependencies so that booting it up for the first time doesn't take 30 minutes for non-developers...
+
+Anway, feel free to make a Pull Request if you would like to contribute and improve upon the script!
