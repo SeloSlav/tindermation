@@ -182,11 +182,19 @@ It is here that you will configure your ``platformVersion``, i.e. 6.0, the file 
 <a name="script"></a>
 ## Run the Script
 
-Navigate to ``C:\Users\santafebound\Documents\tindermation\node_modules\.bin`` and run the following Ruby commands:
-
+Navigate to ``C:\Users\santafebound\Documents\tindermation\node_modules\.bin`` and run the following Ruby commands
 ```ruby
 gem install bundler
 bundle install
+```
+
+Make sure your device is connected by USB. Check with
+``adb devices``
+
+You will see something like the following if your device is connected
+```
+List of devices attached
+1PFUCZ1WMMA44Q6G        device
 ```
 
 Double-check that your appium server is running with ``appium &``. Finally, from the root directory at ``C:\Users\santafebound\Documents\tindermation`` run:
@@ -194,6 +202,8 @@ Double-check that your appium server is running with ``appium &``. Finally, from
 ```ruby
 ruby tindermation.rb
 ```
+
+You may skip the last two commands by running the batch file included in this repo by double-clicking ``tindermation.bat``
 
 <hr>
 
