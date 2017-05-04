@@ -65,7 +65,7 @@ def keep_swiping
 end
 
 # def matches?
-#   exists { find_element(:text, "Matched on") } ? false : true
+#   exists { Appium::Android.text_exact Keep Swiping } ? false : true
 # end
 
 puts "Logging in..."
@@ -83,7 +83,7 @@ while true do
     puts "Looking for girls to match..."
     like_button
     puts "Liked Girl #: #{i+=1}"
-    # while matches? true do
+    # while matches? do
     #   begin
     #     puts "Matched Girl #: #{i}!"
     #     keep_swiping
