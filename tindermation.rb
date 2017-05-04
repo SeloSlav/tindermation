@@ -45,13 +45,12 @@ Appium.promote_appium_methods Object
 def login_button
   sleep 1
   Appium::TouchAction.new.tap( x: 539, y:1464, count: 3).release.perform
-  sleep 5
+  sleep 8
 end
 
 def allow_location_access
   sleep 1
   Appium::TouchAction.new.tap( x: 880, y:1129, count: 3).release.perform
-  sleep 1
 end
 
 def skip_tutorial
@@ -59,34 +58,20 @@ def skip_tutorial
   Appium::TouchAction.new.tap( x: 880, y:1129, count: 3).release.perform
   sleep 1
   Appium::TouchAction.new.tap( x: 727, y:1774, count: 3).release.perform
-  sleep 1
 end
 
 def like_button
   sleep 1
   Appium::TouchAction.new.tap( x: 727, y:1774, count: 3).release.perform
-  sleep 1
 end
 
-# def send_message(text)
-#   sleep 1
-#   find_element(:xpath, "//android.view.View[1]/android.support.v4.view.ViewPager[1]/android.widget.EditText[1]").send_keys(text)
-#   sleep 1
-#   Appium::TouchAction.new.tap( x: 716, y: 577, count: 3).release.perform
-#   Appium::TouchAction.new.tap( x: 24, y: 100, count: 3).release.perform
-# end
+def keep_swiping
+  sleep 1
+  Appium::TouchAction.new.tap( x: 654, y:1591, count: 3).release.perform
+end
 
 # def matches?
-#   exists { find_element(:text, "Matched on").click } ? false : true
-# end
-
-# def click_msgs_btn
-#   Appium::TouchAction.new.tap( x: 900, y: 165, count: 3).release.perform
-
-# end
-
-# def go_to_tinder_home
-#   Appium::TouchAction.new.tap( x: 450, y: 155, count: 3).release.perform
+#   exists { find_element(:text, "Matched on") } ? false : true
 # end
 
 puts "Logging in..."
@@ -99,17 +84,23 @@ puts "Swiping like a demon!"
 set_wait(5)
 i=0
 while true do
+  # Appium::Device.background_app 10
   begin
     puts "Looking for girls to match..."
     like_button
     puts "Liked Girl #: #{i+=1}"
-  rescue Selenium::WebDriver::Error::NoSuchElementError
-    begin
-      puts "Can't Find <3, is there a match?"
-    rescue Selenium::WebDriver::Error::NoSuchElementError
-      puts "#############################################"
-      puts "NO MATCH and NO MORE GIRLS :("
-      puts "#############################################"
-    end
-  end
+    # while matches? true do
+    #   begin
+    #     puts "Matched Girl #: #{i}!"
+    #     keep_swiping
+    #   end
+  # rescue Selenium::WebDriver::Error::NoSuchElementError
+  #   begin
+  #     puts "Can't Find <3, is there a match?"
+  #   rescue Selenium::WebDriver::Error::NoSuchElementError
+  #     puts "#############################################"
+  #     puts "NO MATCH and NO MORE GIRLS :("
+  #     puts "#############################################"
+  #   end
+  # end
 end
