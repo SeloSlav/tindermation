@@ -18,7 +18,7 @@
 ## Description
 Tindermation is the fastest way to generate a large quantity of Tinder leads. Tindermation is an automation script for Android devices that swipes right on every single encounter. This project was forked from <a href="https://github.com/feelobot">feelobot</a> and updated for use in the more recent Tinder installations.
 
-| <a href="https://www.youtube.com/watch?v=x8D2UlPnmtM"><img src="https://github.com/santafebound/tindermation/blob/master/youtube-512.png" width="96"></a>  |
+| <a href="https://www.youtube.com/watch?v=640tI6J5fMI"><img src="https://github.com/santafebound/tindermation/blob/master/youtube-512.png" width="96"></a>  |
 | ------------- |
 | Tindermation Example Video  |
 
