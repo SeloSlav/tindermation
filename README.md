@@ -201,7 +201,7 @@ ruby tindermation.rb
 ## Ideas for Future Development
 
 ### Cross-Device Compatability
-Getting the script to run properly on every device will be require some refactoring because as for now I'm simply selecting the X,Y coordinates that correspond to certain UI elements on my own device (Xaomi Redmi Note 4). I will have to download Appium Inspector or UI Automator Viewer to determine the actual element identifiers.
+Getting the script to run properly on every device will be require some refactoring because as for now I'm simply selecting the X,Y coordinates that correspond to certain UI elements on my own device (Xaomi Redmi Note 4). I will have to download Appium Inspector or UI Automator Viewer to determine the actual element identifiers. If you are using this script on a device other than the one I just mentioned you will have to open ``Settings > Developer Options > Pointer Location`` and redefine each of the ``Appium::TouchAction`` tap functions in the main ``tindermation.rb`` script. 
 
 ### Running in the Background?
 Currently, Appium's Ruby library allows us to send applications to the background but automations will always continue to run on the main OS thread. This means we can't run automations unless the desired application is actively in-use. To truly automate swiping, we are probably better off accessing the Tinder API directly. See <a href="https://github.com/deftx/loltinder">loltinder.git</a>.
