@@ -36,12 +36,6 @@ end
 
 Appium.promote_appium_methods Object
 
-# def get_corny_joke
-#   page = Nokogiri::HTML(open("http://www.pickuplinegenerator.com/"))
-#   puts "# joke: #{page.css("h2").text}"
-#   page.css("h2").text
-# end
-
 def login_button
   sleep 1
   Appium::TouchAction.new.tap( x: 539, y:1464, count: 3).release.perform
