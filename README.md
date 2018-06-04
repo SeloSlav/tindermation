@@ -27,7 +27,7 @@ Tindermation is the fastest way to generate a large quantity of Tinder leads. Ti
 <a name="team"></a>
 ## Team & Past Contributors
 * <a href="https://github.com/feelobot">feelobot</a> (original author)<br> 
-* <a href="https://github.com/santafebound">santafebound</a> 
+* <a href="https://github.com/seloslav">seloslav</a> 
 
 <hr>
 
